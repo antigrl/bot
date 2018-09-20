@@ -1,0 +1,61 @@
+@mixin container {
+  width: 100%;
+  // max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  // padding-right: 1rem;
+  // padding-left: 1rem;
+  @include mq(48em) {
+    // padding-right: 2rem;
+    // padding-left: 2rem;
+  }
+}
+
+@mixin clear {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin mq($min: 0, $max: 0) {
+  @if ($min > 0 and $max > 0) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+  @else if ($min > 0) {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+  @else if ($max > 0) {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+@mixin hide {
+  position: absolute;
+  left: -999rem;
+}
+
+@mixin show {
+  position: static;
+  left: auto;
+}
+
+@mixin zero {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

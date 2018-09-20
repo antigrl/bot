@@ -1,0 +1,106 @@
+body {
+  font-family: $sans-serif;
+  color: $blue;
+  @include font-size(18);
+  line-height: 1.777;
+}
+
+h1, .h1 {
+  @include fluid-type(font-size, 320px, 1440px, 40px, 72px);
+  color: $blue;
+  font-weight: $bolder;
+  letter-spacing: -0.08px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  line-height: 1.055;
+}
+
+h2, .h2 {
+  @include font-size(32);
+  line-height: 1.375;
+  color: $blue;
+}
+
+h3, .h3 {
+  font-weight: $bold;
+  @include font-size(22);
+  line-height: 2.136;
+  margin-bottom: 0;
+}
+
+h3 + p {
+  margin-top: 0.5rem;
+}
+
+h4, .h4 {
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+.heading-inline {
+  @include mq(48em) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2 {
+    display: inline-block;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+a:not([class]) {
+  font-weight: $bold;
+  color: $blue;
+  @include link($gold);
+}
+
+ol:not([class]),
+ul:not([class]) {
+  padding-left: 1.15rem;
+  li {
+    @include font-size(15);
+    font-weight: $bold;
+  }
+}
+
+ul:not([class]) {
+  list-style: square;
+}
+
+.p-intro {
+  margin-top: 0;
+  font-weight: $bold;
+  @include font-size(32);
+  line-height: 1.375;
+}
+
+.p-intro-alt {
+  @include font-size(24);
+  line-height: 1.833;
+}
+
+p {
+  @include font-size(18);
+  line-height: 1.777;
+  font-weight: $book;
+}
+
+hr {
+  border-bottom: 6px solid $blue;
+  border-top: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

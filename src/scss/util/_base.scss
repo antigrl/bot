@@ -1,0 +1,51 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  flex: 0 1 auto;
+}
+
+html {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+body {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+select,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
